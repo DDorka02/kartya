@@ -35,7 +35,7 @@
 }
 
     public function adatLeker2($melyik01,$melyik02,$tabla) {
-        $sql = "SELECT $melyik01, $melyik02 from $tabla order by melyik01";
+        $sql = "SELECT $melyik01, $melyik02 from $tabla order by $melyik01";
         return $this->kapcsolat->query($sql);
 
 }   
