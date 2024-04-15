@@ -15,7 +15,8 @@
         $eredmeny= $adatbazis->adatLeker("kep","szin");
         $adatbazis->megvalosit($eredmeny);
         $eredmeny = $adatbazis->adatLeker2("ertek","szoveg","forma");
-           
+        $adatbazis->oszlop("nev","szin","zold","zöld") ;
+        $adatbazis->megjelenitTabla($eredmeny)   
     ?>   
 </body>
 </html>
