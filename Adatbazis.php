@@ -37,11 +37,27 @@
     public function adatLeker2($melyik01,$melyik02,$tabla) {
         $sql = "SELECT $melyik01, $melyik02 from $tabla order by $melyik01";
         return $this->kapcsolat->query($sql);
+    }
+    public function adatLeker3($oszlop1,$oszlop2,$tabla) {
+        $sql = "SELECT $oszlop1, $oszlop2 from $tabla";
+        return $this->kapcsolat->query($sql);
 
 }   
     public function megvalosit($eredmeny){
         while($sor=$eredmeny->fetch_row()) {
             echo "<img src=\"kepek/$sor[0]\" alt=\"$sor[0]\">";
+        }
+    }
+
+    public function megjelenit($matrix){
+        while($row=$matrix->fetch_row()) {
+            echo "<img src=\"kepek/$row[0]\" alt=\"$row[0]\">";
+        }
+    }
+
+    public function megjelenitTabla($matrix){
+        while($row=$matrix->fetch_row()) {
+            echo "<img src=\"kepek/$row[0]\" alt=\"$row[0]\">";
         }
     }
     function megvalositAsszoc($eredmeny,$melyik01,$melyik02){

@@ -14,8 +14,8 @@
         $adatbazis = new Adatbazis();
         $eredmeny= $adatbazis->adatLeker("kep","szin");
         $adatbazis->megvalosit($eredmeny);
-        $eredmeny = $adatbazis->adatLeker2("ertek","szoveg","forma")
-        
+        $eredmeny = $adatbazis->adatLeker2("ertek","szoveg","forma");
+           
     ?>   
 </body>
 </html>
