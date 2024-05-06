@@ -87,6 +87,31 @@
 
 }
 
+    public function kartyatorles($forma){
+        $sql = "DELETE FROM kartya
+        Where formaAzon IN
+        (SELECT formaAzon from forma
+        WHERE szoveg = '$forma')";
+        return $this->kapcsolat->query($sql);  
+}
+    public function kartyatorlesMind(){
+        $sql = "TRUNCATE TABLE kartya";
+        
+        return $this->kapcsolat->query($sql);
+
+}
+
+    public function kartyaBeszur($szam){
+        $meret = $this->rekordokSzama("szin");
+        for ($i=1; $i < $meret; $i++) { 
+            $sql = "INSERT INTO `kartya`(`szinAzon`, `formaAzon`) VALUES ('$i','$szam')";
+            $this->kapcsolat->query($sql);
+        }
+        
+        
+
+    }
+
     public function kartyaFeltolt($tabla){
         $countSzin = $this->azonMind('szin') + 1;
         $countForma = $this->azonMind('forma') + 1;

@@ -14,6 +14,8 @@
         $adatbazis = new Adatbazis();
         $eredmeny= $adatbazis->adatLeker("kep","szin");
         $adatbazis->megvalosit($eredmeny);
+        $adatbazis->kartyatorles("alsó");
+
         $eredmeny = $adatbazis->adatLeker2("ertek","szoveg","forma");
         $adatbazis->oszlop("nev","szin","zold","zöld") ;
         $adatbazis->megjelenitTabla($eredmeny)   
