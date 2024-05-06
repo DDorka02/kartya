@@ -123,7 +123,19 @@
                 }
     }
 
-}
+    public function formaSzam($szam){
+            $sql = "";
+            return $this->kapcsolat->query($sql);
+        }
+        
+        
+
+    }
+
+
+
+
+//Álmos vagyok, aludni akarok. I am tired, i want to sleep. Yo soy somnoliento,yo nessesito dormir.
 
 
 ?>
